@@ -9,18 +9,20 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 function LineChart(props) {
     const chartConfigs = {
         type: "line", 
-        width: "700", 
+        width: "1100", 
         height: "500",
         
         dataFormat: "json", 
         dataSource: {
     
       chart: {
-        caption: "Countries With Most Oil Reserves [2017-18]",   
-        subCaption: "In MMbbl = One Million barrels",          
-        xAxisName: "Country",           
-        yAxisName: "Reserves (MMbbl)",  
-        numberSuffix: "K",
+        caption: "Maximum number of person appear at given date-time",   
+        plottooltext:"$value , $label",
+        // subCaption: "",          
+        xAxisName: "Date-time",           
+        yAxisName: "frequency",  
+        // numberSuffix: "",
+        
         theme: "fusion"                 
       },
       
@@ -28,7 +30,9 @@ function LineChart(props) {
     }
   };
     return(
+      <div className="line">
         <ReactFC {...chartConfigs} />
+        </div>
     )
 }
  

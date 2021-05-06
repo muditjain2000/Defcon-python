@@ -47,9 +47,9 @@ class Dashboard extends Component {
          
          countData.forEach((element)=>{
           const date=new Date(element.date)
-          const x = (`${date.getDate()}-${date.getMonth()}-21`)
+          const x = (`${date.toLocaleDateString()}-${date.toLocaleTimeString()}`)
           const y =element.count
-          frequencyObject.push([/*"label":*/x,/*"value":*/ y ] )
+          frequencyObject.push({"label":x,"value": y } )
         })
 
         this.setState({
@@ -256,7 +256,7 @@ class Dashboard extends Component {
                     number: {
                     density: {
                         enable: true,
-                        value_area: 1200,
+                        value_area: 1300,
                     },
                     value: 80,
                     },
@@ -322,24 +322,24 @@ class Dashboard extends Component {
                    ]
             } autoplay={true} interval={5000}/></div><br/><br/><br/>
             <div className="dashboard">
-            <div className="linechart">
+            
               
-                <LineChart  data={this.state.frequency}/>
+                <LineChart   data={this.state.frequency}/>
                 
-            </div>
-            </div>
+            
+            </div><br/><br/><br/>
             <div className="dashboard">
             
             <VideoPlayer className="video" src="/output.mp4" width="720" height="480"/>
           
           </div><br/><br/><br/>
-          <div className="dashboard">
+          {/* <div className="dashboard">
             <div className="linechart">
               
                 <ChartViewer  data={[["30-3-21", 133],["1-3-21", 233],["15-3-21", 543]]}/>
                 
             </div>
-            </div>
+            </div> */}
             
             </>
             

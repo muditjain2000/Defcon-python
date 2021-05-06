@@ -116,7 +116,7 @@ class LoginForm extends Form {
                     number: {
                     density: {
                         enable: true,
-                        value_area: 1000,
+                        value_area: 800,
                     },
                     value: 80,
                     },

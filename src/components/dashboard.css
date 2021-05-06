@@ -9,9 +9,18 @@
   justify-content: center;
   display: flex;
 }
-.widget:hover {
+.widget:hover,
+.line:hover {
   box-shadow: 10px 10px 30px 10px rgb(36, 39, 48);
   cursor: pointer;
+}
+
+.line {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  left: 0;
+  position: relative;
 }
 .linechart,
 .pyramidchart,
